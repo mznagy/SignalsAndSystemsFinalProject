@@ -1,0 +1,18 @@
+fs = 100;
+t= linspace(-5, 5, 10*fs);
+y=exp(-abs(t)./5).*(heaviside(t+1)-heaviside(t-3));
+subplot(2,2,1);
+plot(t,y);
+title("y(t)");
+y1=exp(-abs(3*t)./5).*(heaviside((3*t)+1)-heaviside((3*t)-3));
+subplot(2,2,2);
+plot(t,y1);
+title("y1(t)");
+y2=exp(-abs(t+2)./5).*(heaviside((t+2)+1)-heaviside((t+2)-3));
+subplot(2,2,3);
+plot(t,y2);
+title("y2(t)");
+y3=exp(-abs(4-2*t)./5).*(heaviside((4-2*t)+1)-heaviside((4-2*t)-3));
+subplot(2,2,4);
+plot(t,y3);
+title("y3(t)");
